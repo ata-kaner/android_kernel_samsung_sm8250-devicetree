@@ -4,3 +4,16 @@
 
 Samsung accidentally leaked these sources with very early Android 11 kernel releases. They are mostly incomplete.
 However, they can be recreated by reverse engineering prebuilt dts files provided to kernel release of each Samsung Kona device.
+
+**Short Term To-Do List**
+
+* Sync samsung sources to their latest changes from prebuilt dts sources. (Missing NFC,display and camera led drivers for r8q etc.)
+
+* Update Samsung provided qualcomm vendor to their latest changes from prebuilt dts sources. They don't update those files either.
+
+* Boot OneUI and AOSP succesfully with source built dtbo files.
+
+
+**Long Term To-Do List**
+
+* Try to upgrade qualcomm vendor to stock kernels CLO tag (LA.UM.9.12.r1-08000-SMxx50.0) (Maybe)
