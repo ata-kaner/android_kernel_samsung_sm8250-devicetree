@@ -1,19 +1,22 @@
 ## **Device tree sources for Samsung Snapdragon 865 family.**
 
-**Status: Incomplete**
+**Status: %90 completed**
 
-Samsung accidentally leaked these sources with very early Android 11 kernel releases. They are mostly incomplete.
+Samsung accidentally leaked these sources with very early Android 11 kernel releases. Some of the device specific sources are incomplete.
 However, they can be recreated by reverse engineering prebuilt dts files provided to kernel release of each Samsung Kona device.
+
+* Provided Qualcomm vendor is from LA.UM.9.12.r1-08000-SMxx50.0, just like the kernel source.
+
+* These device tree sources must be compiled with DTC 1.4.4-Android-build. Samsung compiles their sources with this release
+and using newer dtc versions will result in a very different dtbo, resulting in boot failure.
 
 **Short Term To-Do List**
 
-* Sync samsung sources to their latest changes from prebuilt dts sources. (Missing NFC,display and camera led drivers for r8q etc.)
+- [x] Sync samsung sources to their latest changes from prebuilt dts sources. (Missing NFC,display and camera led drivers for r8q etc.)
 
-* Update Samsung provided qualcomm vendor to their latest changes from prebuilt dts sources. They don't update those files either.
+- [x] Boot OneUI and AOSP succesfully with source built dtbo files.
 
-* Boot OneUI and AOSP succesfully with source built dtbo files.
+- [ ] Import device specific changes for each project.
 
+- [ ] Completely diff every single source built dts with the prebuilt ones to ensure they are compatible with each project.
 
-**Long Term To-Do List**
-
-* Try to upgrade qualcomm vendor to stock kernels CLO tag (LA.UM.9.12.r1-08000-SMxx50.0) (Maybe)
